@@ -386,6 +386,25 @@
 
   </div>
 
+  <div style="padding: 20px; text-align: center; border: 5px solid black">
+    <div style="display: flex; margin-bottom: 20px;">
+      <p>FSL</p>
+      <input type="file" id="file1" (change)="onFileSelected($event)" />
+      <p style="margin-left: 10px;">DAT</p>
+      <input type="file" id="file2" (change)="onFileSelected2($event)" />
+      <button (click)="upload()">Upload</button>
+    </div>
+    <p *ngIf="loading">Estamos realizando la petición, por favor espere...</p>
+    <div style="display: flex; justify-content: center;">
+      <button (click)="downloadSFC()">
+        Download SFC
+      </button>
+      <button (click)="downloadPFL()" style="margin-left: 10px;">
+        Download PFL
+      </button>
+    </div>
+  </div>
+
   <!-- Next Steps -->
   <h2>Next Steps</h2>
   <p>What do you want to do next with your app?</p>
